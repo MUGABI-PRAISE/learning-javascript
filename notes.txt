@@ -1,0 +1,4 @@
+make it work, then make it better.
+
+Finding resources online is a very great tool as a web developer. always refere to MDN - Moxilla developer Network. its a very great resource for finding answers online.
+

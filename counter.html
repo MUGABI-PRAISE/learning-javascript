@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+</head>
+<body>
+    <h1>Hi there! This is a counter app. </h1>
+    <h2>Hit the increment button to update the counter.</h2>
+    <h1>Count : </h1> <h1 id="count">0</h1>
+
+    <button id="counter-button" onclick="increment()"> INCREMENT </button>
+</body>
+
+<script>
+    let counter = document.getElementById('count');
+    let count = 0;
+    function increment() {
+        count += 1
+        counter.textContent = count
+    }
+</script>
+</html>
