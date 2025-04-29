@@ -47,7 +47,7 @@ console.log(toCelsius(100));
 
 //     Declares a local variable framework = "React".
 
-//     Prints both language and framework.
+//     Prints both language and framework. hels
 
 // After calling the function, try printing framework outside the function.
 let globaVar = 'Javascript';
