@@ -1,57 +1,62 @@
+// 📚 1. Simple Greeting Function
 
-//exercise 1.
-// Create three variables:
+//     Write a function called sayHello.
 
-// Your full name (string).
+//     It should take one parameter name.
 
-// Your age (number).
+//     It should print: Hello, [name]!
 
-// Whether you are a student (boolean).
+sayHello('praise'); //function declaration can be called before it's declaration.
+function sayHello (name='mugabi'){
+    console.log(`Hello ${name}`);
+}
 
-let myFullName = 'mugabi praise'; //string
-let myAge = 34; //number
-let amStudent = true //boolean
+// 3. Find the Larger Number
 
-//exercise 2.
-//what are the datatypes of the following? write them in a comment.
-const a = "5"; //string
-const b = 5; //number
-const c = true;//boolean
-const d = null; // null
-const e = undefined; //undefined
-const f = {name: "Alice", age: 22}; //object
+//     Write a function findMax.
 
-//exercise three.
-// Solve these:
+//     It should take two numbers and return the larger one.
 
-10 % 3 //1
+const findMax =(x=0 ,y=0) => {
+    if(x > y){
+        return x;
+    } else if(y > x){
+        return y;
+    }else{
+        return ` the two numbers ${x} and ${y} are the equal`
+    }
+}
 
-2 ** 4 // 16
+console.log(findMax(9,9));
 
-5 === "5" //false
+// Write a function called toCelsius.
 
-5 == "5" //true
+// It should take a temperature in Fahrenheit and return it in Celsius.
 
-true && false //false
+// Formula:
+// Celsius=(Fahrenheit−32)×59
+// Celsius=(Fahrenheit−32)×95​
 
-//exercise four
-let text = "JavaScript Programming";
+const toCelsius = (temperature = 0) => (temperature - 32) * (5/9);
 
-// Answer the following:
+console.log(toCelsius(100));
 
-//     How many characters are in text?
+// Declare a global variable language = "JavaScript".
 
-//     Change all letters in text to uppercase.
+// Create a function printLanguage that:
 
-//     Check if text includes the word "Program".
+//     Declares a local variable framework = "React".
 
-//     Extract only the word "Script" from text using slice.
+//     Prints both language and framework.
 
-charactersInText = 22;
-console.log(text.toUpperCase());
-console.log(text.includes('Program'));
-console.log(text.slice(4,10));
+// After calling the function, try printing framework outside the function.
+let globaVar = 'Javascript';
 
+function printLanguage(){
+    let framework = 'React';
+    return console.log(`${globaVar} is the language and ${framework} is the framework`);
+}
 
-console.log(`hi there, my name is ${myFullName} and i am ${myAge} years old`);
+printLanguage();
 
+//console.log(framework); // cannobe be accesssed outside the loop.
