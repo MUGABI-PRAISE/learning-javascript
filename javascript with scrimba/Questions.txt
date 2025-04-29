@@ -1,7 +1,0 @@
-QUESTIONS. 
-what is the difference between textContent and inlineText
-The DOM. what's this??
-is it a must to terminate in javascript? as if sometimes i don't terminate and it works
-is it a must to use let when declaring variables? it works even when i don't use 'let'
-what does deprecating mean? i used a variable called name and they crossed it telling me it was deprecated.
-what does the 'span' tag mean in html

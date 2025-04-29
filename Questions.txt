@@ -1,0 +1,16 @@
+QUESTIONS. 
+what is the difference between textContent and inlineText
+The DOM. what's this??
+is it a must to terminate in javascript? as if sometimes i don't terminate and it works
+is it a must to use let when declaring variables? it works even when i don't use 'let'
+what does deprecating mean? i used a variable called name and they crossed it telling me it was deprecated.
+what does the 'span' tag mean in html
+
+--29/04/2025--
+what's the difference between using defer in a javascript tag in the head and using it after the html?
+which one of these is the best option? 
+what's the difference between using async in a javascript tag in the head and leaving it? after all the code will run before html.
+
+what's the difference between redeclaring and reassigning?
+how do i use javascript to print a word in the browser if i wnat to use it inside html? 
+eg  <p> this is my <script>name</script> </p>
