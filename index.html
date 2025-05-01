@@ -4,20 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer> 
-        //defer allows your javascript to wait for the html to fully load, before it loading.
-        //async lets javascript run before waiting for html to fully load. this can cause problems. 
-    </script>
+    
 </head>
 <body>
-    <h1>check your eligibility to vote</h1>
-    <form action="" id="registrationForm">
-        <input type="text" id="checkeligibility" placeholder="enter you age to check if you're eligible to vote">
-        <button onclick="getAge">
-            submit
-        </button>
-    </form>
+    <h1 id="welcome-note"></h1>
+    <p id="description"></p>
 </body>
 
-    
+<script src="script.js" defer> 
+    //defer allows your javascript to wait for the html to fully load, before it loading.
+    //async lets javascript run before waiting for html to fully load. this can cause problems. 
+</script>
 </html>
