@@ -2,58 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>To-Do List App</title>
   
 </head>
 <body>
 
-  <h2>📝 My To-Do List</h2>
-  <input type="text" id="taskInput" placeholder="Enter new task..." />
-  <button onclick="addTask()">Add</button>
+  <h2 id="counter"></h2>
+  <button onclick="increaseCount()">increase counter</button>
 
-  <ul id="taskList"></ul>
 
-  <script>
-    function addTask() {
-      const input = document.getElementById("taskInput");
-      const taskText = input.value.trim();
-
-      if (taskText === "") {
-        alert("Task cannot be empty.");
-        return;
-      }
-
-      const li = document.createElement("li");
-
-      const span = document.createElement("span");
-      span.className = "task-content";
-      span.textContent = taskText;
-
-      const editBtn = document.createElement("button");
-      editBtn.textContent = "Edit";
-      editBtn.onclick = function () {
-        const newTask = prompt("Update the task:", span.textContent);
-        if (newTask !== null && newTask.trim() !== "") {
-          span.textContent = newTask.trim();
-        }
-      };
-
-      const deleteBtn = document.createElement("button");
-      deleteBtn.textContent = "Delete";
-      deleteBtn.onclick = function () {
-        if (confirm("Are you sure you want to delete this task?")) {
-          li.remove();
-        }
-      };
-
-      li.appendChild(span);
-      li.appendChild(editBtn);
-      li.appendChild(deleteBtn);
-
-      document.getElementById("taskList").appendChild(li);
-      input.value = "";
-    }
-  </script>
+ 
 
 </body>
+<script src="script.js"></script>
 </html>
