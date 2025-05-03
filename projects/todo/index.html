@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Your Tasks</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="user-header">
+                <h1><i class="fas fa-tasks"></i> TaskMaster</h1>
+                <div class="user-controls">
+                    <span id="userGreeting"></span>
+                    <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+                </div>
+            </div>
+            <p>Organize your work and life with ease</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Add a new task...">
+            <button id="addTaskBtn"><i class="fas fa-plus"></i> Add Task</button>
+        </div>
+        
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All Tasks</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        
+        <ul id="taskList"></ul>
+        
+        <div class="stats">
+            <span id="tasksLeft">0 tasks left</span>
+            <button id="clearCompleted">Clear Completed</button>
+        </div>
+    </div>
+
+    <!-- Auth logic -->
+    <script src="scripts/auth.js"></script>
+    <!-- App logic -->
+    <script src="scripts/app.js"></script>
+
+    <!-- Optional fallback (in case auth.js hasn't updated greeting yet) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(sessionStorage.getItem('currentUser')) ||
+                                JSON.parse(localStorage.getItem('currentUser'));
+
+            if (currentUser) {
+                const greetingEl = document.getElementById('userGreeting');
+                if (greetingEl) {
+                    greetingEl.textContent = `Hello, ${currentUser.name}`;
+                }
+
+                const logoutBtn = document.getElementById('logoutBtn');
+                if (logoutBtn) {
+                    logoutBtn.addEventListener('click', () => {
+                        sessionStorage.removeItem('currentUser');
+                        localStorage.removeItem('currentUser');
+                        window.location.href = 'auth/login.html';
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>
